@@ -11,7 +11,7 @@ Summary: Aliyun OSS (Object Storage Service) SDK.
 
 Alibaba Cloud Object Storage Python SDK 2.x. This version is not
 compatible with the previous version (Version 0.x). The package
-name is "oss2" to avoid conflict with previous versions.
+name is "oss2" to avoid conflicts with previous versions.
 
 
 Current build status
