@@ -1,5 +1,5 @@
 {% set name = "oss2" %}
-{% set version = "2.9.1" %}
+{% set version = "2.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 34b9fbc22eba56d4c9522b743a2c930a6d20883b8e20cd74b444b38cb2efa509
+  sha256: 9feaca5fcc52612f3de6860bae6d8c4b01714385884df8dc1d578049b9d9b6ed
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -35,7 +35,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Aliyun OSS (Object Storage Service) SDK.'
+  summary: Aliyun OSS (Object Storage Service) SDK.
   description: |
     Alibaba Cloud Object Storage Python SDK 2.x. This version is not
     compatible with the previous version (Version 0.x). The package
