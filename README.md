@@ -5,7 +5,7 @@ Home: http://oss.aliyun.com
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/oss2-feedstock/blob/master/LICENSE.txt)
 
 Summary: Aliyun OSS (Object Storage Service) SDK.
 
