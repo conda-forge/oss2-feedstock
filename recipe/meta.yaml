@@ -10,7 +10,7 @@ source:
   sha256: df17d6fe38deedb80bfa60ee0eecc0a1b2fa507f6aaeb8af37b22645257acfdd
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -23,8 +23,9 @@ requirements:
     - crcmod >=1.7
     - pycryptodome >=3.4.7
     - aliyun-python-sdk-kms >=2.4.1
-    - aliyun-python-sdk-core >=2.6.2  # [py==27]
-    - aliyun-python-sdk-core-v3 >=2.5.5  # [py>=36]
+    # aliyun-python-sdk-core is python2/3 compatible in recent releases
+    # py3 will pull in an updated, compatible build.
+    - aliyun-python-sdk-core >=2.6.2
 
 test:
   imports:
