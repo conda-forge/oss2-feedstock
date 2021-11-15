@@ -1,35 +1,40 @@
 {% set name = "oss2" %}
 {% set version = "2.15.0" %}
 
+
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/oss2-{{ version }}.tar.gz
   sha256: d8b5a10ba2291ff4c78246576f243dcec262f1f646344e61f3192dc262e87430
 
 build:
   number: 0
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python
     - pip
+    - python >=3.6
   run:
-    - python
-    - requests !=2.9.0
+    - aliyun-python-sdk-core >=2.13.12
+    - aliyun-python-sdk-kms >=2.4.1
     - crcmod >=1.7
     - pycryptodome >=3.4.7
-    - aliyun-python-sdk-kms >=2.4.1
-    # aliyun-python-sdk-core is python2/3 compatible in recent releases
-    # py3 will pull in an updated, compatible build.
-    - aliyun-python-sdk-core >=2.6.2
+    - python >=3.6
+    - requests !=2.9.0
+    - six
 
 test:
   imports:
     - oss2
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: http://oss.aliyun.com
