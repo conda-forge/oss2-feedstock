@@ -1,5 +1,5 @@
 {% set name = "oss2" %}
-{% set version = "2.17.0" %}
+{% set version = "2.18.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/oss2-{{ version }}.tar.gz
-  sha256: da4489b89c76ec72c9dd4888bd2787c9e106cdd412cf6e14be00898e7dbcc859
+  sha256: 335c52bec7d8f7ee05f3e816d18a125a86a0a6d014c9e9045ca3b91a2484bbd4
 
 build:
   number: 0
